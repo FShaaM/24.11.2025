@@ -10,6 +10,9 @@ struct Planar
 
 Planar* make(std::istream& is);
 Planar* most_left(Planar** pls, size_t k);
+Planar* make(size_t pl);
+void draw(Planar* pl);
+void free_planars(Planar** pls, size_t k);
 
 int main()
 {
@@ -20,7 +23,21 @@ int main()
 
 	Planar* left = most_left(pls, k);
 
-	//drow(left);
+	for (size_t i = 0; i < 10; ++i)
+	{
+		try
+		{
+			pls[k] = make(i % 2);
+		}
+		catch (...)
+		{
+			free_planars(pls, k);
+			return 2;
+		}
+		k++;
+	}
 
-	// free_planars(pls, k);
+	draw(most_left(pls,k));
+	free_planars(pls, k);
 }
+	
