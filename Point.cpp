@@ -1,5 +1,10 @@
 #include "Point.h"
 
+Point::Point() :
+	Planar(),
+	data{0, 0}
+{}
+
 Point::Point(int xx, int yy) :
 	Planar(),
 	data{ xx, yy }

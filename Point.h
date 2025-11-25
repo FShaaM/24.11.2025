@@ -10,6 +10,7 @@ struct Point : Planar
 	virtual int x() const;
 	virtual int y() const;
 	virtual int abc_sqr() const;
+	Point();
 	Point(int xx, int yy);
 	virtual ~Point() = default;
 
