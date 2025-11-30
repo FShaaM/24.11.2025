@@ -10,7 +10,7 @@ struct Vector : Planar
 	virtual int x() const;
 	virtual int y() const;
 	virtual int abc_sqr() const;
-	Vector(Point biginning, Point end);
+	Vector(Point beginning, Point end);
 	virtual ~Vector() = default;
 
 private:
