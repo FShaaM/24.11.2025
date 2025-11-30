@@ -7,13 +7,17 @@
 
 struct Rhomb : Planar
 {
+  Point center;
+  int diagonal_G;
+  int diagonal_V;
+
   virtual int x() const;
   virtual int y() const;
   virtual int abc_sqr() const;
 
   Rhomb();
-  Rhomb(Point center, int diag1, int diag2);
-  Rhomb(Point p1, Point p2, Point p3, Point p4);
-}
+  Rhomb(Point A, Point B, Point C, Point D);
+  Rhomb(Point center, int diagG, int diagV);
+};
 
 #endif
