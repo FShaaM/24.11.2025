@@ -22,7 +22,7 @@ int main()
 
 			if (s == capusity)
 			{
-				Planar** epls = new Planar * [capusity * 1.2];
+				Planar** epls = new Planar* [capusity * 12];
 
 				for (size_t i = 0; i < s; ++i)
 				{
