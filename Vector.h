@@ -10,6 +10,8 @@ struct Vector : Planar
 	virtual int x() const;
 	virtual int y() const;
 	virtual int abc_sqr() const;
+	virtual double area() const;
+	virtual Frame frame() const;
 	Vector(Point beginning, Point end);
 	virtual ~Vector() = default;
 

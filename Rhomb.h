@@ -4,6 +4,7 @@
 
 #include "Planar.h"
 #include "Point.h"
+#include "Frame.h"
 
 struct Rhomb : Planar
 {
@@ -14,9 +15,10 @@ struct Rhomb : Planar
   virtual int x() const;
   virtual int y() const;
   virtual int abc_sqr() const;
+  virtual double area() const;
+  virtual Frame frame() const;
 
   Rhomb();
-  Rhomb(Point A, Point B, Point C, Point D);
   Rhomb(Point center, int diagG, int diagV);
 };
 
